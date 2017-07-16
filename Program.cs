@@ -33,7 +33,7 @@ namespace shopify_app
         public static String GetCustomer(long id){
             
             var client = new RestClient();
-            client.BaseUrl = new Uri("Enter shopify store url herre"); 
+            client.BaseUrl = new Uri("Enter shopify store url here"); 
             client.Authenticator = new HttpBasicAuthenticator("Enter API key here", "Enter API password here");
             var request = new RestRequest(); 
             request.Resource = System.String.Format("/admin/customers/{0}.json", id);
@@ -45,7 +45,7 @@ namespace shopify_app
 
         public static String GetCustomers(){
             var client = new RestClient();
-            client.BaseUrl = new Uri("Enter shopify store url herre"); 
+            client.BaseUrl = new Uri("Enter shopify store url here"); 
             client.Authenticator = new HttpBasicAuthenticator("Enter API key here", "Enter API password here");
             var request = new RestRequest(); 
             request.Resource = System.String.Format("/admin/customers.json");
